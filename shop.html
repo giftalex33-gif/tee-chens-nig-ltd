@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Shop | Tee Chens Nig Ltd</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">Reliable solar products & energy solutions <span>Talk to our team: <a href="tel:+2348000000000">+234 800 000 0000</a></span></div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">TC<span>+</span></span><span>TEE CHENS <small>NIG. LTD.</small></span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown"><button type="button">Company</button><div class="nav-menu"><a href="about.html">About Tee Chens</a><a href="projects.html">Projects & Installations</a><a href="news.html">News & Insights</a><a href="contact.html">Contact</a></div></div>
+        <div class="nav-dropdown"><button type="button">Solutions</button><div class="nav-menu"><a href="solutions.html">All Energy Solutions</a><a href="energy-storage.html">Energy Storage</a><a href="installation.html">Solar Installation</a><a href="system-builder.html">Solar System Planner</a><a href="trade.html">Trade & Business Enquiries</a></div></div>
+        <div class="nav-dropdown"><button type="button">Shop</button><div class="nav-menu"><a href="shop.html">All Products</a><a href="shop.html?category=Solar%20Panels">Solar Panels</a><a href="shop.html?category=Inverters">Inverters</a><a href="shop.html?category=Batteries">Batteries</a><a href="shop.html?category=Solar%20Kits">Solar Kits</a><a href="brands.html">Brands</a><a href="compare.html">Compare Products</a><a href="wishlist.html">Wishlist</a><a href="cart.html">Enquiry Basket</a></div></div>
+        <div class="nav-dropdown"><button type="button">Support</button><div class="nav-menu"><a href="support.html">Customer Support</a><a href="faq.html">FAQs</a><a href="datasheets.html">Datasheets</a><a href="delivery-returns.html">Delivery & Returns</a><a href="track-order.html">Track Enquiry</a></div></div>
+        <a class="nav-shop" href="shop.html">Explore Products ↗</a>
+        <a class="cart-link" href="cart.html">Enquiry <b id="cart-count">0</b></a>
+      </nav>
+    </div>
+  </header>
+  <div class="mega-strip">...</div>
+  <main>
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">TEE CHENS ONLINE SHOP</p>
+        <h1>Find the right power products.</h1>
+        <p class="lead">Browse solar panels, inverters, batteries and installation essentials. Use search and filters to narrow your options.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Solar panel products">
+    </section>
+    <section class="content-wrap">
+      <div class="shop-layout">
+        <aside class="filters">
+          <h3>Filter products</h3>
+          <div class="filter-group">
+            <strong>Categories</strong>
+            <label><input type="checkbox" name="category" value="Solar Panels"> Solar Panels</label>
+            <label><input type="checkbox" name="category" value="Inverters"> Inverters</label>
+            <label><input type="checkbox" name="category" value="Batteries"> Batteries</label>
+            <label><input type="checkbox" name="category" value="Solar Kits"> Solar Kits</label>
+            <label><input type="checkbox" name="category" value="Solar Lighting"> Solar Lighting</label>
+            <label><input type="checkbox" name="category" value="Accessories"> Accessories</label>
+          </div>
+          <button class="btn btn-outline" id="clear-filters" style="width:100%">Clear filters</button>
+          <div class="notice" style="margin-top:18px;">Need help sizing a system? <a href="contact.html#quote"><strong>Request expert guidance ↗</strong></a></div>
+        </aside>
+        <div>
+          <div class="shop-toolbar">
+            <input class="search-input" id="product-search" placeholder="Search products, categories…">
+            <select id="sort-products" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="name">Name: A–Z</option>
+              <option value="category">Category</option>
+            </select>
+            <span id="result-count" class="small-muted"></span>
+          </div>
+          <div id="shop-products" class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" style="background:#10263e; color:#dbe7f7; padding:42px 0 20px; margin-top:60px;">
+    <div class="content-wrap">
+      <div class="detail-grid" style="grid-template-columns:1.3fr 1fr 1fr 1fr;">
+        <div> ... </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/extended.js"></script>
+</body>
+</html>
