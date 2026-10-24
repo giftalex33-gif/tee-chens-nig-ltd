@@ -1,844 +1,120 @@
-/* Base */
-:root {
-  --bg: #f3f7fb;
-  --surface: #ffffff;
-  --surface-soft: #f6f9fc;
-  --surface-strong: #edf4ff;
-  --ink: #14263f;
-  --muted: #586c80;
-  --line: rgba(20, 38, 63, 0.10);
-  --brand: #113a5d;
-  --brand-deep: #0d2e4e;
-  --brand-2: #f7b944;
-  --brand-3: #d8eb7d;
-  --accent: #0d6f64;
-  --success: #1a8e66;
-  --shadow: 0 20px 50px rgba(17, 58, 93, 0.12);
-  --shadow-soft: 0 10px 30px rgba(17, 58, 93, 0.07);
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Shop | Tee Chens Nig Ltd</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">Reliable solar products & energy solutions <span>Talk to our team: <a href="tel:+2348000000000">+234 800 000 0000</a></span></div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">TC<span>+</span></span><span>TEE CHENS <small>NIG. LTD.</small></span></a>
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:
-    radial-gradient(circle at top right, rgba(247, 185, 68, 0.15), transparent 26%),
-    linear-gradient(180deg, #f6f9fb 0%, #eef5fb 100%);
-  color: var(--ink);
-  line-height: 1.6;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
-main { padding-bottom: 72px; }
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-.container,
-.content-wrap,
-.section,
-.hero,
-.page-hero,
-.cta-band,
-.split-section,
-.footer-inner,
-.detail-grid {
-  width: min(1200px, calc(100% - 32px));
-  margin-left: auto;
-  margin-right: auto;
-}
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown"><button type="button">Company</button><div class="nav-menu"><a href="about.html">About Tee Chens</a><a href="projects.html">Projects & Installations</a><a href="news.html">News & Insights</a><a href="contact.html">Contact</a></div></div>
+        <div class="nav-dropdown"><button type="button">Solutions</button><div class="nav-menu"><a href="solutions.html">All Energy Solutions</a><a href="energy-storage.html">Energy Storage</a><a href="installation.html">Solar Installation</a><a href="system-builder.html">Solar System Planner</a><a href="trade.html">Trade & Business Enquiries</a></div></div>
+        <div class="nav-dropdown"><button type="button">Shop</button><div class="nav-menu"><a href="shop.html">All Products</a><a href="shop.html?category=Solar%20Panels">Solar Panels</a><a href="shop.html?category=Inverters">Inverters</a><a href="shop.html?category=Batteries">Batteries</a><a href="shop.html?category=Solar%20Kits">Solar Kits</a><a href="brands.html">Brands</a><a href="compare.html">Compare Products</a><a href="wishlist.html">Wishlist</a><a href="cart.html">Enquiry Basket</a></div></div>
+        <div class="nav-dropdown"><button type="button">Support</button><div class="nav-menu"><a href="support.html">Customer Support</a><a href="faq.html">FAQs</a><a href="datasheets.html">Datasheets</a><a href="delivery-returns.html">Delivery & Returns</a><a href="track-order.html">Track Enquiry</a></div></div>
+        <a class="nav-shop" href="shop.html">Explore Products ↗</a>
+        <a class="cart-link" href="cart.html">Enquiry <b id="cart-count">0</b></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☀</button>
+      </nav>
+    </div>
+  </header>
+  <div class="mega-strip">
+    <a href="shop.html">All products</a>
+    <a href="shop.html?category=Solar%20Panels">Solar panels</a>
+    <a href="shop.html?category=Inverters">Inverters</a>
+    <a href="shop.html?category=Batteries">Batteries</a>
+    <a href="shop.html?category=Solar%20Kits">Solar kits</a>
+    <a href="shop.html?category=Solar%20Lighting">Lighting</a>
+    <a href="compare.html">Compare products</a>
+    <a href="wishlist.html">Wishlist</a>
+  </div>
+  <main>
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">TEE CHENS ONLINE SHOP</p>
+        <h1>Find the right power products.</h1>
+        <p class="lead">Browse solar panels, inverters, batteries and installation essentials. Use search and filters to narrow your options.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Solar panel products">
+    </section>
 
-.topbar {
-  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
-  color: #edf5ff;
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
-  padding: 10px 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.topbar a { color: var(--brand-3); font-weight: 600; }
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.header-inner {
-  width: min(1200px, calc(100% - 32px));
-  margin: 0 auto;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--brand-2), #f6d26d);
-  color: var(--brand-deep);
-  box-shadow: inset 0 0 0 1px rgba(13,46,78,0.08);
-  font-size: 1.1rem;
-}
-.brand small {
-  display: block;
-  font-size: 0.56rem;
-  letter-spacing: 0.18em;
-  opacity: 0.8;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 14px;
-  position: relative;
-}
-.nav > a,
-.nav-dropdown > button {
-  color: var(--ink);
-  border: 0;
-  background: none;
-  padding: 10px 0;
-  font-weight: 600;
-  font-size: 0.92rem;
-}
-.nav > a:hover,
-.nav-dropdown > button:hover,
-.nav-dropdown.open > button {
-  color: var(--brand);
-}
-.nav-dropdown {
-  position: relative;
-}
-.nav-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  min-width: 220px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: var(--shadow-soft);
-  padding: 10px;
-  display: none;
-  z-index: 30;
-}
-.nav-dropdown.open .nav-menu,
-.nav-dropdown:hover .nav-menu {
-  display: block;
-}
-.nav-menu a {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  color: var(--ink);
-}
-.nav-menu a:hover {
-  background: var(--surface-soft);
-}
-.nav-shop {
-  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
-  color: #fff !important;
-  padding: 10px 16px !important;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: var(--shadow-soft);
-}
-.cart-link {
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink);
-  font-weight: 700;
-}
-.cart-link b {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  min-height: 20px;
-  border-radius: 999px;
-  background: var(--brand-2);
-  color: var(--brand-deep);
-  font-size: 0.8rem;
-  margin-left: 6px;
-}
-
-.mega-strip {
-  background: var(--surface-soft);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-.mega-strip::-webkit-scrollbar { display: none; }
-.mega-strip a {
-  display: inline-block;
-  padding: 12px 16px;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.hero {
-  width: min(1200px, calc(100% - 32px));
-  margin: 52px auto;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 28px;
-  align-items: center;
-}
-.eyebrow {
-  margin: 0 0 10px;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 800;
-}
-.hero h1,
-.page-hero h1,
-.section h2,
-.split-copy h2,
-.cta-band h2 {
-  margin: 0 0 16px;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  color: var(--ink);
-}
-.hero h1 {
-  font-size: clamp(2.7rem, 4vw, 5rem);
-}
-.hero-intro,
-.lead,
-.page-hero .lead,
-.feature-card p,
-.article-grid p,
-.content p,
-.notice,
-.form-card p,
-.contact-panel p,
-.support-card p {
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-.hero-actions {
-  margin-top: 28px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-.btn,
-button.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  font-weight: 700;
-  transition: 0.2s ease;
-}
-.btn-lime {
-  background: linear-gradient(135deg, var(--brand-3), #cfe665);
-  color: var(--brand-deep);
-}
-.btn-dark {
-  background: var(--brand-deep);
-  color: #fff;
-}
-.btn-outline {
-  border-color: rgba(17, 58, 93, 0.18);
-  background: rgba(255,255,255,0.4);
-  color: var(--ink);
-}
-.text-link {
-  color: var(--brand);
-  font-weight: 700;
-}
-.hero-proof {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-.hero-proof div {
-  background: rgba(255,255,255,0.6);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 14px 16px;
-}
-.hero-proof strong,
-.hero-proof small {
-  display: block;
-}
-.hero-proof strong {
-  font-size: 1.05rem;
-}
-.hero-proof small {
-  color: var(--muted);
-}
-.hero-visual {
-  position: relative;
-}
-.hero-visual img {
-  height: min(640px, 72vh);
-  width: 100%;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-.floating-card {
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(17,58,93,0.08);
-  border-radius: 18px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow-soft);
-}
-.sun-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(247, 185, 68, 0.18);
-  color: var(--brand-deep);
-  font-weight: 800;
-}
-.floating-card strong,
-.floating-card small {
-  display: block;
-}
-.floating-card small { color: var(--muted); }
-.hero-caption {
-  position: absolute;
-  right: 18px;
-  bottom: -12px;
-  background: var(--brand-deep);
-  color: #edf5ff;
-  border-radius: 999px;
-  padding: 8px 14px;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.trust-strip {
-  background: #0e2d4c;
-  color: #edf4ff;
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  align-items: center;
-  gap: 0;
-  text-align: center;
-  padding: 18px 32px;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.trust-strip i {
-  display: block;
-  width: 1px;
-  height: 18px;
-  background: rgba(255,255,255,0.28);
-  margin: 0 auto;
-}
-
-.section {
-  width: min(1200px, calc(100% - 32px));
-  margin: 72px auto 0;
-}
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: end;
-  margin-bottom: 24px;
-}
-.section h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
-}
-.lead {
-  margin: 0;
-}
-.category-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.category-row a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 10px 16px;
-  font-weight: 700;
-  color: var(--ink);
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
-}
-.product-card,
-.feature-card,
-.article-grid article,
-.contact-panel,
-.form-card,
-.notice,
-.support-card,
-.info-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: var(--shadow-soft);
-}
-.product-card {
-  overflow: hidden;
-}
-.product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-.product-card-body {
-  padding: 18px 18px 22px;
-}
-.product-meta {
-  display: inline-block;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--brand);
-}
-.product-card h3,
-.feature-card h3,
-.article-grid h3,
-.info-card h3,
-.contact-panel h3,
-.form-card h3,
-.support-card h3 {
-  margin: 10px 0 8px;
-  font-size: 1.25rem;
-}
-.product-card p {
-  color: var(--muted);
-  margin: 0 0 16px;
-}
-.card-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.card-actions strong {
-  font-size: 1.1rem;
-}
-.icon-btn {
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--brand-deep);
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.split-section {
-  width: min(1200px, calc(100% - 32px));
-  margin: 72px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
-}
-.split-image img {
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-.check-list {
-  margin: 22px 0 28px;
-  padding: 0;
-  list-style: none;
-}
-.check-list li {
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 12px;
-  color: var(--ink);
-  font-weight: 600;
-}
-.check-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--success);
-}
-
-.muted-section {
-  background: rgba(255,255,255,0.35);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 64px 0 72px;
-  margin-top: 72px;
-}
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-.feature-card {
-  padding: 22px;
-}
-.feature-number {
-  display: block;
-  margin-bottom: 18px;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--muted);
-  font-weight: 800;
-}
-.feature-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: rgba(17,58,93,0.06);
-  color: var(--brand);
-  font-size: 1.5rem;
-  margin-bottom: 16px;
-}
-.feature-card a {
-  color: var(--brand);
-  font-weight: 700;
-}
-
-.cta-band {
-  width: min(1200px, calc(100% - 32px));
-  margin: 72px auto 0;
-  background: linear-gradient(135deg, #0f2f4c, #133d67 50%, #0d2e4e);
-  color: #edf5ff;
-  border-radius: 30px;
-  padding: 36px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.cta-band h2,
-.cta-band p,
-.cta-band .eyebrow {
-  color: #edf5ff;
-}
-.cta-band p { margin: 0; }
-
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-.article-grid article {
-  overflow: hidden;
-}
-.article-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-.content {
-  padding: 18px 18px 20px;
-}
-.article-meta {
-  margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--brand);
-  font-weight: 800;
-}
-.article-grid a {
-  color: var(--brand);
-  font-weight: 700;
-}
-
-.footer {
-  background: #10263e;
-  color: #dbe7f7;
-  padding: 42px 0 20px;
-  margin-top: 60px;
-}
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
-  gap: 28px;
-}
-.footer a {
-  color: #dbe7f7;
-  display: inline-block;
-  margin-bottom: 8px;
-}
-.footer h4 {
-  color: #fff;
-  margin: 0 0 12px;
-}
-.footer .brand {
-  color: #fff;
-}
-
-.page-hero {
-  width: min(1200px, calc(100% - 32px));
-  margin: 52px auto 0;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 26px;
-  align-items: center;
-}
-.page-hero h1 {
-  font-size: clamp(2.4rem, 4vw, 4rem);
-}
-.page-hero img {
-  width: 100%;
-  height: min(480px, 54vw);
-  object-fit: cover;
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-}
-
-.contact-grid,
-.shop-layout,
-.content-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 24px;
-}
-.contact-panel,
-.form-card,
-.filters {
-  padding: 24px;
-}
-.contact-panel h3,
-.form-card h3,
-.filters h3 {
-  margin-top: 0;
-}
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-}
-.contact-list li {
-  margin-bottom: 14px;
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-.field,
-.filter-group input,
-.filter-group select,
-.search-input,
-.shop-toolbar select,
-input,
-textarea,
-select {
-  width: 100%;
-}
-input,
-textarea,
-select {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 12px 14px;
-  background: #fff;
-  color: var(--ink);
-}
-textarea { min-height: 140px; resize: vertical; }
-.form-actions {
-  margin-top: 18px;
-}
-.notice {
-  padding: 16px 18px;
-}
-
-.filters {
-  background: rgba(255,255,255,0.6);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: var(--shadow-soft);
-}
-.filter-group {
-  display: grid;
-  gap: 10px;
-  margin: 18px 0 20px;
-}
-.filter-group label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink);
-}
-.filter-group input { width: auto; }
-.shop-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 22px;
-}
-.search-input { flex: 1 1 260px; }
-.shop-toolbar select {
-  max-width: 220px;
-}
-.small-muted {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
-}
-.menu-toggle span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background: var(--ink);
-  margin: 0 auto;
-}
-
-.nav-open {
-  display: flex !important;
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
-  padding: 12px 0 0;
-}
-
-@media (max-width: 980px) {
-  .hero,
-  .page-hero,
-  .split-section,
-  .contact-grid,
-  .shop-layout,
-  .detail-grid,
-  .feature-grid,
-  .article-grid,
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero,
-  .page-hero,
-  .split-section,
-  .contact-grid,
-  .shop-layout {
-    display: grid;
-  }
-
-  .nav {
-    display: none;
-    width: 100%;
-    padding-bottom: 10px;
-  }
-  .menu-toggle { display: flex; }
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 72px;
-    flex-wrap: wrap;
-  }
-  .nav-open {
-    display: flex !important;
-  }
-}
-
-@media (max-width: 720px) {
-  .hero,
-  .page-hero,
-  .split-section,
-  .contact-grid,
-  .shop-layout,
-  .detail-grid,
-  .feature-grid,
-  .article-grid,
-  .product-grid,
-  .form-grid,
-  .hero-proof {
-    grid-template-columns: 1fr;
-  }
-
-  .section-heading,
-  .cta-band {
-    display: block;
-  }
-
-  .trust-strip {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 8px;
-  }
-
-  .cta-band {
-    padding: 28px 24px;
-  }
-
-  .nav-shop,
-  .cart-link {
-    width: 100%;
-    text-align: center;
-  }
-}
+    <section class="section">
+      <div class="shop-layout">
+        <aside class="filters">
+          <h3>Filter products</h3>
+          <div class="filter-group">
+            <strong>Categories</strong>
+            <label><input type="checkbox" name="category" value="Solar Panels"> Solar Panels</label>
+            <label><input type="checkbox" name="category" value="Inverters"> Inverters</label>
+            <label><input type="checkbox" name="category" value="Batteries"> Batteries</label>
+            <label><input type="checkbox" name="category" value="Solar Kits"> Solar Kits</label>
+            <label><input type="checkbox" name="category" value="Solar Lighting"> Solar Lighting</label>
+            <label><input type="checkbox" name="category" value="Accessories"> Accessories</label>
+          </div>
+          <button class="btn btn-outline" id="clear-filters" style="width:100%">Clear filters</button>
+          <div class="notice" style="margin-top:18px;">Need help sizing a system? <a href="contact.html#quote"><strong>Request expert guidance ↗</strong></a></div>
+        </aside>
+        <div>
+          <div class="shop-toolbar">
+            <input class="search-input" id="product-search" placeholder="Search products, categories…" autocomplete="off">
+            <select id="sort-products" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="name">Name: A–Z</option>
+              <option value="category">Category</option>
+            </select>
+            <span id="result-count" class="small-muted"></span>
+          </div>
+          <div id="search-suggestions" class="search-suggestions" aria-live="polite"></div>
+          <div id="shop-products" class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" style="background:#10263e; color:#dbe7f7; padding:42px 0 20px; margin-top:60px;">
+    <div class="content-wrap">
+      <div class="detail-grid" style="grid-template-columns:1.3fr 1fr 1fr 1fr;">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff;"><span class="brand-mark">TC<span>+</span></span><span>TEE CHENS <small>NIG. LTD.</small></span></a>
+          <p style="margin-top:12px; color:#dbe7f7;">Practical solar products and energy solutions for homes, businesses and industry.</p>
+        </div>
+        <div>
+          <h4 style="color:#fff;">Explore</h4>
+          <a href="about.html">About us</a><br>
+          <a href="solutions.html">Solutions</a><br>
+          <a href="projects.html">Projects</a><br>
+          <a href="news.html">News & insights</a>
+        </div>
+        <div>
+          <h4 style="color:#fff;">Shop</h4>
+          <a href="shop.html">All products</a><br>
+          <a href="shop.html?category=Solar%20Panels">Solar panels</a><br>
+          <a href="shop.html?category=Inverters">Inverters</a><br>
+          <a href="shop.html?category=Batteries">Batteries</a>
+        </div>
+        <div>
+          <h4 style="color:#fff;">Get in touch</h4>
+          <a href="contact.html">Contact us</a><br>
+          <a href="contact.html#quote">Request a quote</a><br>
+          <a href="mailto:hello@teechenstld.com">hello@teechenstld.com</a><br>
+          <a href="tel:+2348000000000">+234 800 000 0000</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/extended.js"></script>
+</body>
+</html>
